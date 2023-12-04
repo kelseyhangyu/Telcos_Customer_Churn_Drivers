@@ -1,34 +1,28 @@
 import pandas as pd
 import numpy as np
-
-def prep_iris(iris):
-    iris = iris.reset_index(drop=True)
-    iris = iris.drop(['measurement_id'], axis=1)
-    iris = iris.rename(columns={'species_name':'species'})
-    return iris
-
-def prep_titanic(titanic):
-    titanic = titanic.drop(['class'], axis=1)
-    titanic = titanic.drop(['embarked'], axis=1)
-    titanic['age'] = titanic['age'].fillna(titanic.age.mean())
-    titanic['embark_town'] = titanic['embark_town'].fillna(titanic.embark_town.mode()[0])
-    titanic = titanic.drop(columns=['deck'])
-    return titanic
-
 def prep_telco(telco):
-    telco= telco.drop(['payment_type_id'],axis =1)
+    '''
+    fill NaN values in internet_service_type column and churn_month column
+    fill the ' ' in total_charges column with 0 and convert it to float
+    drop the id columns
+    '''
+    telco['internet_service_type']=telco['internet_service_type'].fillna('No internet service')
+    telco['churn_month']=telco['churn_month'].fillna('not churned')
+    telco.total_charges = telco.total_charges.replace(' ','0.0')
+    telco.total_charges = telco.total_charges.astype(float)
+    telco=telco.drop(['payment_type_id'],axis =1)
     telco=telco.drop(['contract_type_id'],axis =1)
     telco=telco.drop(['internet_service_type_id'],axis =1)
- # Strip leading and trailing whitespaces from the column with blank values
-    telco['total_charges'] = telco['total_charges'].str.strip()
-# Drop rows with blank values in the specified column
-    telco = telco[telco['total_charges'] != '']
-    telco['internet_service_type'] = telco['internet_service_type'].fillna('neither')
     return telco
+
 
 
 from sklearn.model_selection import train_test_split
 def split(df,target_variable):
+    '''
+    split the dataframe into 3 subsets with 60%, 20% and 20% ratio
+    
+    '''
 
     #first split
     train, validate_test = train_test_split(df, 
@@ -45,4 +39,3 @@ def split(df,target_variable):
                 )
     
     return train, validate, test
-
