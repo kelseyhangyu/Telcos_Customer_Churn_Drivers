@@ -16,6 +16,8 @@
 
 3. Data dictionary:
 
+<img width="832" alt="Screenshot 2023-12-05 at 10 52 10 PM" src="https://github.com/kelseyhangyu/Telcos_Customer_Churn_Drivers/assets/146888019/bdba72eb-b18b-48b6-a5ec-ba1058d9a12b">
+
 Varibale name              Description
 
 'senior_citizen',          'yes': is senior citizen; 'no': not senior citizen
