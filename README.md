@@ -1,4 +1,4 @@
-1.  Project Overview and Goal:
+# Project Overview and Goal:
 
 - According to TechSee's report based on a 2019 survey result,39% of Americans canceled their telecom contracts due to unsatisfied customer service (TechSee Augmented Vision Ltd., 2022).
 
