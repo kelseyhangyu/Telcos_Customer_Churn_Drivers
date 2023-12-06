@@ -36,15 +36,15 @@
   > Present findings
 
 # Reproduction of findings
-- request credential for mysql server from Codeup
-- clone this repository
+- Request credential for mysql server from Codeup
+- Clone this repository
 
 # Key Findings
 - Random forest model(n_estimators=700, max_depth=4) is chosen to be the best model, with 79% accuracy
 - The chosen model is conservative on prediction compared to actual values
 - No churn: lower monthly charges, higher tenure, no Internet service, 2-year contract, no paperless billing and credit card payment
   > Recommendations:
-     - encourage 2-year contract, no papperless billing and credit card auto payment through various stimulations
-     - lower monthly charges
+     - Encourage 2-year contract, no papperless billing and credit card auto payment through various stimulations
+     - Lower monthly charges
   > Next Steps:
   - To quantify how much each controllable factor can affect churning status, especially on internet service
