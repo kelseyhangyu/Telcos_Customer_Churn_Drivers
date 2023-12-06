@@ -8,18 +8,18 @@
 
 - The goal is to develop a ML classification model in order to predict the churning pattern of a customer, and therefore implementing proactive measures to prevent the churning before it happens.
 
-2. Questions explored:
+# Questions explored:
 - How many customers have churned?
 - How do monthly charges, total charges and tenure (continuous variables) affect churn?
 - How are the categorical variables affect churn?
 - Do people have higher tenure tend to have lower monthly charges?
 
-3. Data dictionary:
+# Data dictionary:
 
 <img width="832" alt="Screenshot 2023-12-05 at 10 52 10 PM" src="https://github.com/kelseyhangyu/Telcos_Customer_Churn_Drivers/assets/146888019/bdba72eb-b18b-48b6-a5ec-ba1058d9a12b">
 
 
-4. Project planning
+# Project planning
 - Data acquisition from mysql with credentials
 - Data preparation:
   > removed duplicated columns
@@ -35,11 +35,11 @@
   > Draw conclusions
   > Present findings
 
-5. Reproduction of findings
+# Reproduction of findings
 - request credential for mysql server from Codeup
 - clone this repository
 
-6. Key Findings
+# Key Findings
 - Random forest model(n_estimators=700, max_depth=4) is chosen to be the best model, with 79% accuracy
 - The chosen model is conservative on prediction compared to actual values
 - No churn: lower monthly charges, higher tenure, no Internet service, 2-year contract, no paperless billing and credit card payment
