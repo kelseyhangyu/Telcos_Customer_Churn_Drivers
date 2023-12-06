@@ -4,7 +4,7 @@ def prep_telco(telco):
     '''
     fill NaN values in internet_service_type column and churn_month column
     fill the ' ' in total_charges column with 0 and convert it to float
-    drop the id columns
+    drop the 3 id columns
     '''
     telco['internet_service_type']=telco['internet_service_type'].fillna('No internet service')
     telco['churn_month']=telco['churn_month'].fillna('not churned')
@@ -13,6 +13,7 @@ def prep_telco(telco):
     telco=telco.drop(['payment_type_id'],axis =1)
     telco=telco.drop(['contract_type_id'],axis =1)
     telco=telco.drop(['internet_service_type_id'],axis =1)
+    telco = telco.drop(['churn_month','signup_date'], axis=1)
     return telco
 
 
