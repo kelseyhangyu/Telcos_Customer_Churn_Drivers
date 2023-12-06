@@ -18,26 +18,6 @@
 
 <img width="832" alt="Screenshot 2023-12-05 at 10 52 10 PM" src="https://github.com/kelseyhangyu/Telcos_Customer_Churn_Drivers/assets/146888019/bdba72eb-b18b-48b6-a5ec-ba1058d9a12b">
 
-Varibale name              Description
-
-'senior_citizen',          'yes': is senior citizen; 'no': not senior citizen
-'partner',                 'yes': has partner; 'no': no partner
-'dependents',              'yes': have dependents; 'no': no dependents
-'tenure',                   numbers of months a customer has used Telco service
-'online_security',          yes / no
-'online_backup',            yes / no
-'device_protection',        yes / no
-'tech_support',             yes / no
-'streaming_tv',             yes / no
-'streaming_movies',         yes / no
-'paperless_billing',        yes / no
-'monthly_charges',          monthly fee charged
-'total_charges',            total fee charged since the service started
-'churn',                    yes: churned, no: unchurned
-'contract_type',            month-to-month, one-year, two-year 
-'internet_service_type',    fiber optic, dsl, no internet service
-'payment_type'              Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)
-
 
 4. Project planning
 - Data acquisition from mysql with credentials
